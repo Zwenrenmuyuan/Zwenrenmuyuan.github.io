@@ -25,6 +25,13 @@
         textEl.textContent = buf;
         e.preventDefault();
       } else if (e.key === 'Enter') {
+        const target = window.ZWENRENMUYUAN_ROUTES && window.ZWENRENMUYUAN_ROUTES[buf.trim()];
+        if (target) {
+          buf = '';
+          textEl.textContent = '';
+          window.location.href = target;
+          return;
+        }
         buf = '';
         textEl.textContent = '';
       } else if (e.key.length === 1) {
