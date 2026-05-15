@@ -17,7 +17,7 @@
   // 打字:有 #text 才启用
   const textEl = document.getElementById('text');
   if (textEl) {
-    let buf = '';
+    let buf = textEl.textContent;
     window.addEventListener('keydown', (e) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return;
       if (e.key === 'Backspace') {
